@@ -40,7 +40,7 @@ namespace CoreWebApi.Controllers
                 db.Employees.Add(ep);
                 db.SaveChanges();
             }
-            return new JsonResult("Created Success");
+            return new JsonResult("Created Successfully");
         }
 
         [HttpPut]
@@ -60,7 +60,7 @@ namespace CoreWebApi.Controllers
             }
             _context.SaveChanges();
 
-            return new JsonResult("Updated Success");
+            return new JsonResult("Updated Successfully");
         }
 
         [HttpDelete("{id}")]
@@ -75,7 +75,7 @@ namespace CoreWebApi.Controllers
                     db.SaveChanges();
                 }
             }
-            return new JsonResult("Deleted Success");
+            return new JsonResult("Deleted Successfully");
         }
 
         [Route("SaveFile")]
