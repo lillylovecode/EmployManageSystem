@@ -1,5 +1,5 @@
-
 using CoreWebApi.Context;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Newtonsoft.Json.Serialization;
 
@@ -19,7 +19,7 @@ options.SerializerSettings.ReferenceLoopHandling=Newtonsoft.Json.ReferenceLoopHa
     .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver
     = new DefaultContractResolver());
 
-builder.Services.AddDbContext<mytestdbContext>();
+builder.Services.AddDbContext<mytestdbContext>(options=>options.UseSqlServer(builder.Configuration.GetConnectionString("mytestdbConnection")));
 
 builder.Services.AddControllers();
 

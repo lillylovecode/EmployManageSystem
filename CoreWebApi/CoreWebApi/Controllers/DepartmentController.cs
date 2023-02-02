@@ -21,6 +21,7 @@ namespace CoreWebApi.Controllers
             _context = context;
         }
 
+        [HttpGet]
         public JsonResult Get()
         {
             List<Department> result;

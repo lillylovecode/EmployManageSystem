@@ -24,10 +24,6 @@ namespace CoreWebApi.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer("Server=.;Database=mytestdb;Trusted_Connection=True;User Id=sa;password=2raiidolg@");
-            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
